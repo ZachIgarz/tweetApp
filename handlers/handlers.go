@@ -4,7 +4,8 @@ import (
 	"log"
 	"net/http"
 	"os"
-
+	"github.com/ZachIgarz/tweetApp/middlew"
+	"github.com/ZachIgarz/tweetApp/routers"
 	"github.com/gorilla/mux"
 	"github.com/rs/cors"
 )
@@ -13,6 +14,10 @@ import (
 func Manejadores() {
 	//captura el http, y el response y el require!
 	router := mux.NewRouter()
+	//END POIN
+	router.HandleFunc("/registro", middlew.chequeoBD(routers.Registro)),Methods("POST")
+
+
 	//verifica variable de entorno del sistema
 	PORT := os.Getenv("PORT")
 	if PORT == "" {
