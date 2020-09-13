@@ -6,7 +6,7 @@ import (
 	"github.com/ZachIgarz/tweetApp/routers"
 )
 
-/*ValidoJwt  permite validar el jwt que viene en la peticion*/
+/*ValidoJwt  permite validar el jwt que viene en la peticiones*/
 func ValidoJwt(next http.HandlerFunc) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 
