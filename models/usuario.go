@@ -15,7 +15,7 @@ type Usuario struct {
 	Apellido        string             `bson:"apellido" json:"apellido,omitempty"`
 	FechaNacimiento time.Time          `bson:"fechaNacimiento" json:"fechaNacimiento,omitempty"`
 	Email           string             `bson:"email" json:"email"`
-	Password        string             `bson:"pass" json:"pass,omitempty"`
+	Password        string             `bson:"password" json:"password,omitempty"`
 	Avatar          string             `bson:"avatar" json:"avatar,omitempty"`
 	Banner          string             `bson:"banner" json:"banner,omitempty"`
 	Biografia       string             `bson:"biografia" json:"biografia,omitempty"`
