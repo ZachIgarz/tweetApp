@@ -30,6 +30,14 @@ func Manejadores() {
 	router.HandleFunc("/subirBanner", middlew.ChequeoBD(middlew.ValidoJWT(routers.SubirBanner))).Methods("POST")
 	router.HandleFunc("/optenerBanner", middlew.ChequeoBD(routers.OptenerBanner)).Methods("GET")
 
+	router.HandleFunc("/altaRelacion", middlew.ChequeoBD(routers.AltaRelacion)).Methods("POST")
+	router.HandleFunc("/bajaRelacion", middlew.ChequeoBD(routers.BajaRelacion)).Methods("DELETE")
+
+	router.HandleFunc("/consultaRelacion", middlew.ChequeoBD(routers.ConsultaRelacion)).Methods("GET")
+
+	router.HandleFunc("/listaUsuario", middlew.ChequeoBD(routers.ListaUsuarios)).Methods("GET")
+	router.HandleFunc("/leoTweetsSeguidores", middlew.ChequeoBD(routers.LeoTweetsSeguidores)).Methods("GET")
+
 	//verifica variable de entorno del sistema
 	PORT := os.Getenv("PORT")
 	if PORT == "" {

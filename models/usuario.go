@@ -10,7 +10,7 @@ import (
 type Usuario struct {
 	//el id de mongo es binario
 	//omitemtpy se usa para devolver vacio si no existe
-	ID              primitive.ObjectID `bson:"_id, omitempty" json:"id"`
+	ID              primitive.ObjectID `bson:"_id,omitempty" json:"id"`
 	Nombre          string             `bson:"nombre" json:"nombre,omitempty"`
 	Apellido        string             `bson:"apellido" json:"apellido,omitempty"`
 	FechaNacimiento time.Time          `bson:"fechaNacimiento" json:"fechaNacimiento,omitempty"`
