@@ -9,7 +9,7 @@ import (
 )
 
 /*LeoTweetsSeguidores Lee los tweets de mis seguidores*/
-func LeoTweetsSeguidores(ID string, pagina int) ([]models.DevuelvoTweetsSeguidores.DevuelvoTweetsSeguidores, bool) {
+func LeoTweetsSeguidores(ID string, pagina int) ([]models.DevuelvoTweetsSeguidores, bool) {
 
 	ctx, cancel := context.WithTimeout(context.Background(), 15*time.Second)
 	defer cancel()
